@@ -1,16 +1,16 @@
 // document.write("<h2>I'm Web Devaloper ROHIT</h2>")
 
 class stud{
-    constructor(){
-        let name;
+    constructor(name){
+        this.studName = name;
         
     }
 
     hello(){
-        document.write(`constructor ${this.name}`)
+        document.write(`constructor ${this.studName}`)
     }
 }
 
-let a = new stud();
-a.name = "Rohit"
+let a = new stud( "Rohit Nittawadekar");
+
 a.hello();
