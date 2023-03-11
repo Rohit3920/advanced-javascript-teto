@@ -2,15 +2,16 @@
 
 class stud{
     constructor(name){
-        this.studName = name;
-        
+       this.studName = name;
+        document.write(`${this.studName} `)
     }
 
-    hello(){
-        document.write(`constructor ${this.studName}`)
+    static hello(){
+        document.write(` Static Function  `)
     }
 }
 
-let a = new stud( "Rohit Nittawadekar");
+let a = new stud("Rohit Nittawadekar");
 
-a.hello();
+
+stud.hello();
