@@ -1,4 +1,6 @@
-import { r as rohit } from "./labraryModule.js";
+import { r as rohit, yuh } from "./labraryModule.js";
 
 
-console.log( r);
+console.log( rohit);
+
+yuh(9,7,3,3);
