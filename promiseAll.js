@@ -1,32 +1,21 @@
-document.write("Hello! I'am Web Develper ROHIT <br> Promise.all")
+
+let promiseCall = function(returnData, message){
+    return function(resolve, reject)  {
+        setTimeout(() => {
+            console.log(`result: ${returnData} ; `);
+        }, 2000)
+    }
+};
 
 
-let p1 = new Promise((resolve, reject) => {
-    setTimeout( () => {
-            console  .log("promise Frist");
-            resolve(10);
-        }, 1000);
-});
-
-let p2 = new Promise((resolve, reject) => {
-    setTimeout( () => {
-            console  .log("promise second");
-            resolve(20);
-        }, 2000);
-});
-
-let p3 = new Promise((resolve, reject) => {
-    setTimeout( () => {
-            console  .log("promise second");
-            resolve(30);
-        }, 3000);
-});
+let p1 = new Promise(promiseCall(10, "first promise"))
+let p2 = new Promise(promiseCall(20, "second promise"))
 
 
-
-
-Promise.all([p1,p2,p3]).then((result)=> {
-   
-    console.log(`Result : ${result}`)
+Promise.all([p1,p2]).then((result) => {
+    for(var i in result){
+        total += result[i];
+    }
 })
+
 
